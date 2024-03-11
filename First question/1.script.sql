@@ -28,6 +28,7 @@ SELECT
 FROM t_marek_maly_project_sql_primary_final tmmpspf
 GROUP BY payroll_year, industry_branch_code
 ORDER BY industry_branch_code, payroll_year
+;
 
 -- 2. TABULKA	
 WITH difference AS (
@@ -55,7 +56,3 @@ SELECT
 FROM difference
 GROUP BY industry_branch_code, increasing_or_decreasing
 ;
-
-
-
-
