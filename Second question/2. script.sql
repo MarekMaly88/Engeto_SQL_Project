@@ -131,3 +131,5 @@ JOIN v_first_period_payroll
 ON v_first_period_bread_milk.year_from = v_first_period_payroll.payroll_year; 
 
 -- přidání nového sloupce s výpočtem průměrného množství
+ALTER TABLE quantity_of_bread_milk_fp 
+ADD COLUMN quantity DECIMAL(10, 2) GENERATED ALWAYS AS (average_payroll / amount_in_CZK);
